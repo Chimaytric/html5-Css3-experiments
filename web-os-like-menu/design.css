@@ -1,0 +1,21 @@
+header ul{ margin: auto;
+	text-align: center;
+	height: 200px;
+	background-color: #34495e;
+}
+header ul li{ display: inline-block;
+	vertical-align: top;
+	width: 130px;
+	height: 140px;
+	margin: 0 -5px;
+	padding: 30px 10px;
+	-webkit-transform: skewX(-10deg);
+	-webkit-transition: 1s ease height;
+	-moz-transform: skewX(-10deg);
+	-moz-transition: 1s ease height;
+}
+header ul li:nth-child(4n+1){ background-color: #1abc9c; }
+header ul li:nth-child(4n+2){ background-color: #2ecc71; }
+header ul li:nth-child(4n+3){ background-color: #3498db; }
+header ul li:nth-child(4n+4){ background-color: #9b59b6; }
+header ul li:hover{ height: 160px; }
