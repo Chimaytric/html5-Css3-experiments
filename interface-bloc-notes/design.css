@@ -10,8 +10,37 @@ section ul li{ display: inline-block;
 	box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1) inset;
 	border-radius: 2%     0%     0%     0% /     20%     0%     0%     0%;
 	margin: 20px;
+	padding: 10px;
+	text-align: left;
 }
+section ul li:first-child:hover{ cursor: pointer; }
+section ul li h1{ display: inline-block;
+	width: calc(100% - 20px);
+}
+section ul li input{ width: 100%;
+	border: none;
+	background-color: rgba(255,255,255,0);
+	font-size: 1.2em;
+	text-align: center;
+}
+input:active, input:focus{ outline: none; }
+section ul li > span{ display: none;
+	width: 17px;
+	height: 17px;
+	font-family: Arial;
+	background-color: rgba(0,0,0,0.72);
+	color: white;
+	border-radius: 100%;
+	text-align: center;
+}
+section ul li > span:hover{ cursor: pointer; }
+section ul li:hover > span{ display: inline-block; }
 section ul li:first-child{ border-radius: 10px;
 	border: 2px dashed rgba(0,0,0,0.49);
 	background-color: rgba(0,0,0,0);
+	font-family: Arial;
+	font-size: 150px;
+	text-align: center;
+	color: rgba(0,0,0,0.4);
+	text-shadow: 1px 1px white, -1px -1px #444;
 }
