@@ -1,20 +1,16 @@
-body{ background-image: url(loader.gif);
-	background-size: cover;
-}
-header{ height: 100px;
-}
-section ul{ text-align: center;}
-section ul li{ display: inline-block;
+section > ul{ text-align: center;}
+section > ul > li{ display: inline-block;
 	vertical-align: top;
-	width: 40%;
-	max-width: 600px;
+	width: 600px;
 	height: 600px;
-	margin: 0 10px;
 }
-section ul li #map{ height: 100%;}
-section ul #info{ border: thin solid rgba(0,0,0,0.56); }
-#liste{ width: 1175px;
-	min-height: 600px;
-	margin: 20px auto;
-	border: thin solid rgba(0,0,0,0.56);
+section > ul > li #map{ height: 100%; width: 100%;}
+section > ul > li > ul > li > ul{ text-align: left;
+	border-bottom: thin solid rgba(5,5,5,0.5);
+	border-left: thin solid rgba(5,5,5,0.5);
+}
+section > ul > li > ul > li > ul:hover{ cursor: pointer;}
+section > ul > li > ul > li > ul > li{ display: inline-block;
+	vertical-align: top;
+	padding: 10px;
 }
