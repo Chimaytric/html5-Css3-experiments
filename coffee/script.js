@@ -1,6 +1,7 @@
 var map;
 var geocoder = new google.maps.Geocoder();;
 var markers = new Array();
+var infowindows = new Array();
 
 function MapInitialiser() {
 	var latlng = new google.maps.LatLng(48.858859, 2.34706);
@@ -41,13 +42,17 @@ function MapInitialiser() {
 				current[j].setAttribute('selected', 'false');
 				current[j].style.backgroundColor = 'rgba(5,5,5,0)';
 			}
-			for(var valeur in markers)
-				markers[valeur].setVisible(false);
-				
+			for(var valeurMarker in markers)
+				markers[valeurMarker].setVisible(false);
+
+			for(var valeurInfowindow in infowindows)
+				infowindows[valeurInfowindow].close();
+
 			this.setAttribute('selected', 'true');
 			this.style.backgroundColor = 'rgba(5,5,5,0.3)';
-			geocodeAndLocate(this.getElementsByClassName('address')[0].innerHTML);
-			//console.log(markers);
+			var contentString = this.getElementsByClassName('address')[0].innerHTML;
+			var infowindow = createInfowindow(this.getElementsByClassName('name')[0].innerHTML, this.getElementsByClassName('address')[0].innerHTML);
+			geocodeAndLocate(this.getElementsByClassName('address')[0].innerHTML, infowindow);
 		}, false);
 		
 		element.appendChild(subList);
@@ -55,7 +60,15 @@ function MapInitialiser() {
 	}
 	
 }
-function geocodeAndLocate(address){
+function createInfowindow(name, address){
+	var contentString = '<h1>'+name+'</h1>'+'<p>'+address+'</p><a href="https://www.google.fr/maps/place/'+address+'">Open in google maps</a>';
+
+	infowindows[address] = new google.maps.InfoWindow({
+		content: contentString
+	});
+	return(infowindows[address]);
+}
+function geocodeAndLocate(address, infowindow){
     if(markers[address] == undefined){
     	geocoder.geocode( { 'address': address}, function(results, status) {
 		    if (status == google.maps.GeocoderStatus.OK) {
@@ -64,6 +77,9 @@ function geocodeAndLocate(address){
 		    		map: map,
 		            position: results[0].geometry.location,
 		        });
+		        google.maps.event.addListener(markers[address], 'click', function() {
+    				infowindow.open(map,markers[address]);
+  				});
 		    } else {
 		        alert("Geocode was not successful for the following reason: " + status);
 		    }
@@ -71,6 +87,7 @@ function geocodeAndLocate(address){
     } else
     	markers[address].setVisible(true);
 }
+
 function sleep(miliseconds) {
    var currentTime = new Date().getTime();
    while (currentTime + miliseconds >= new Date().getTime()) {
