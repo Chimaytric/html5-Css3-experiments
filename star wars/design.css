@@ -1,0 +1,48 @@
+body{
+	margin: auto;
+	background-image: url('background.jpg');
+}
+
+#scene{
+	width: 780px;
+	height: 700px;
+	margin: auto;
+	-webkit-perspective: 500px;
+}
+#square{
+	width: 780px;
+	height: 700px;
+	border: thin solid black;
+	margin: auto;
+	-webkit-transform: rotateX(40deg);
+	overflow: hidden;
+}
+p{
+	margin-top: 330px;
+	-webkit-animation:defilement 20s linear;
+	-webkit-animation-iteration-count: 1;
+	
+	color: yellow;
+	text-align: center;
+}
+h1{
+	-webkit-animation:defilement 20s linear;
+	-webkit-animation-iteration-count: 1;
+	
+	color: yellow;
+	text-align: center;
+}
+
+
+
+@-webkit-keyframes defilement {
+	from{
+		margin-top: 330px;
+	}
+	50%{
+		margin-top: -50px;
+	}
+	to{
+		margin-top: -300px;
+	}
+}

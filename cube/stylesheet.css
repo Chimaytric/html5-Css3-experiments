@@ -1,0 +1,41 @@
+
+.stage
+{
+	width: 900px;
+	height: 600px;
+	-webkit-perspective: 500px;
+}
+
+.cube
+{
+	margin-left: 250px;
+	margin-top: 140px;
+	width: 300px;
+	height: 300px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(-50Deg) rotateY(40Deg) rotateZ(10Deg);
+}
+
+.cubeface
+{
+	position: absolute;
+	-webkit-transition: all 600ms ease-in;
+	top: 15px;
+	left: 15px;
+	
+	background-image: url('img/tile_bberry.png');
+}
+
+#face1   { -webkit-transform: translateZ(135px);}
+#face2   { -webkit-transform: translateX(135px) rotateY(90Deg); }
+#face3     { -webkit-transform: translateX(-135px) rotateY(-90Deg); }
+#face4    { -webkit-transform: translateZ(-135px); }
+#face5 { -webkit-transform: translateY(135px) rotateX(90Deg); }
+#face6    { -webkit-transform: translateY(-135px) rotateX(-90Deg); }
+
+.cube:hover #face1   { -webkit-transform: translateZ(250px); }
+.cube:hover  #face2  { -webkit-transform: translateX(250px) rotateY(90Deg); }
+.cube:hover  #face3  { -webkit-transform: translateX(-250px) rotateY(-90Deg); }
+.cube:hover  #face4      { -webkit-transform: translateZ(-250px); }
+.cube:hover  #face5 { -webkit-transform: translateY(250px) rotateX(90Deg); }
+.cube:hover  #face6     { -webkit-transform: translateY(-250px) rotateX(-90Deg); }
