@@ -1,5 +1,5 @@
 var map;
-var geocoder = new google.maps.Geocoder();;
+var geocoder = new google.maps.Geocoder();
 var markers = new Array();
 var infowindows = new Array();
 

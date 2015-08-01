@@ -1,0 +1,93 @@
+body{ text-align: center;
+	font-family: Arial;
+}
+.menu{ display: inline-block;
+	margin: 20px;
+	padding: 5px;
+	background-color: #F2F2F2;
+	text-align: left;
+	border-radius: 2px;
+}
+.menu > *{ min-width: 200px; }
+.menu > h1{ display: block;
+	padding: 10px 20px;
+	font-size: 2em;
+	color: white;
+	background-color: #1abc9c;
+	border-radius: 2px 2px 0 0;
+}
+.menu > li{ margin: 2px 0;
+	background-color: white;
+	transition: all 0.3s ease;
+}
+.menu > li:last-child{ margin-bottom: 0;
+	border-radius: 0 0 2px 2px;
+}
+.menu > li:first-of-type{ margin-top: 4px;; }
+.menu > li:hover{ background-color: #3498db;
+	cursor: pointer;
+}
+.menu > li > h2{ display: block;
+	padding: 10px;
+	font-size: 1.5em;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: left;
+	text-indent: 0;
+	transition: all 0.5s ease;
+}
+.menu > li:hover h2{ text-indent: 0.5em;
+	color: white;
+}
+.menu > li > ul{ max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+.menu > li:hover > ul{ min-height: 200px;
+	height: auto;
+}
+.menu > li > ul > li > h3{ display: block;
+	padding: 10px 20px;
+	border-top: 1px solid rgba(0, 0, 0, 0);
+	color: white;
+	text-align: right;
+	text-indent: 0;
+	font-weight: 100;
+	transition: all 0.3s ease;
+}
+.menu > li:hover > ul > li > h3{  border-top: 1px solid #2980b9; }
+.menu > li > ul > li:first-child > h3{ border-top: none; }
+.menu > li > ul > li > h3:hover{ padding-right: 30px;
+	color: #1abc9c;
+	font-weight: 700;
+}
+.menu > li > ul > li h3:active{ background-color: #2980b9; }
+.menu > li > ul > li h3:active{ background-color: #2980b9; }
+
+@media screen and (max-width: 768px){
+	.menu > li:hover{ background-color: white; }
+	.menu > li:hover >h2{text-indent: 0;
+		color: rgba(0, 0, 0, 0.5);
+	}
+	.menu > li > ul > li > h3{ color: rgba(0, 0, 0, 0.5);
+		border-top: 1px solid rgba(0, 0, 0, 0.2);
+	}
+	.menu > li:hover > ul > li > h3{  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+	.menu > li > ul > li > h3:hover{ border-top: 1px solid #3498db;
+		padding-right: 20px;
+		font-weight: 100;
+		color: white;
+		background-color: #3498db;
+	}
+	.menu > li > ul > li:first-child > h3{ border-top: none; }
+	.menu > li > ul, .menu > li:hover > ul{ height: 200px;
+		max-height: none;
+		min-height: none;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.menu{ margin: 0;
+		width: 100%;
+	}
+	.menu h1, .menu > li  > h2, .menu > li > ul > li > h3{ text-align: center; }
+}

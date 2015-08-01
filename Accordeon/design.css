@@ -1,0 +1,49 @@
+body{ background-color: #ecf0f1;
+	font-family: Arial;
+}
+#accordion{ width: 250px;
+	margin: 50px auto;
+	border: 1px solid #7f8c8d;
+	border-radius: 5px;
+	background-color: white;
+}
+#accordion h1{ display: block;
+	padding: 10px 0;
+	border-bottom: 1px solid #7f8c8d;
+	background: -webkit-linear-gradient(top, rgba(189,195,199,1) 0%,rgba(149,165,166,1) 100%);
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	font-size: 1.6em;
+	color: white;
+}
+#accordion h1:hover{ cursor: pointer; }
+#accordion li{ border-bottom: 1px solid #7f8c8d; }
+#accordion li:last-child{ border: none; }
+#accordion li h2{ display: block;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.05);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	text-align: center;
+	font-size: 1.3em;
+	color: rgba(0, 0, 0, 0.5);
+}
+#accordion li h2:hover{ cursor: pointer; }
+#accordion li:not(.fixed) h2 span{ display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	transition: all 0.3s ease;
+	border-top: 4px solid;
+}
+#accordion li p{ padding: 10px;
+	text-indent: 1em;
+	line-height: 1.3em;
+}
+#accordion li img{ display: block;
+	width: 100%;
+	height: 100%;
+}
+#accordion li:last-child img{ border-radius: 0 0 5px 5px; }

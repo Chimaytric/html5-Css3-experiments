@@ -1,0 +1,17 @@
+html, body{ height: 100%; }
+body{ font-family: Arial; }
+
+nav{ padding: 5px;
+	box-shadow: 0px 0px 10px 0px #656565;
+}
+nav button{ background-color: white;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 2px;
+}
+nav button:hover{ cursor: pointer; }
+nav button:active{ background-color: rgba(0, 0, 0, 0.1); }
+
+aside{ width: 250px;
+	background-color: white;
+	box-shadow: 0px 6px 5px 0px #656565;
+}

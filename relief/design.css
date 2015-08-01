@@ -1,0 +1,61 @@
+body{ font-family: Arial;
+	text-align: center;
+}
+#tabs{ display: inline-block;
+	margin: 20px 0;
+	border: 1px solid rgba(0,  0, 0, 0.3);
+	border-radius: 4px;
+}
+#tabs li{ display: inline-block;
+	vertical-align: top;
+	padding: 10px;
+	font-size: 1.3em;
+	color: rgba(0, 0, 0, 0.4);
+	border-right: 1px solid rgba(0,  0, 0, 0.3);
+	transition: all 0.3s ease;
+}
+#tabs li:last-child{ border: none; }
+#tabs li:hover, #tabs li.selected{ background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	color: #3498db;
+}
+#tabs li:active{ box-shadow: inset 0px 0px 5px 0px #c0c0c0; }
+#elements{ width: 80%;
+	margin: auto;
+}
+#elements li{ display: inline-block;
+	vertical-align: middle;
+	width: 150px;
+	height: 180px;
+	margin: 20px;
+	padding: 0;
+}
+#elements li img{ border-radius: 100%;
+	transition: all 0.3s ease;
+}
+#elements li h1{ margin: 5px 0;
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.4);
+}
+#elements li.selected img{ width: 150px;
+	height: 150px;
+	box-shadow: 0px 0px 10px 0px #c0c0c0;
+}
+#elements li:not(.selected) img{ width: 100px;
+	height: 100px;
+	margin: 45px auto;
+	-webkit-filter: blur(5px);
+	box-shadow: inset 0px 0px 0px 0px #c0c0c0;
+}
+
+@media screen and (max-width: 480px){
+	#tabs li{ display: block;
+		border-right: none;
+		border-bottom: 1px solid rgba(0,  0, 0, 0.3);
+	}
+	#tabs li:last-child{ border-bottom: none; }
+	#elements li:not(.selected){ width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+}

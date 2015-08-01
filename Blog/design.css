@@ -1,0 +1,106 @@
+.wrapper{ width: 75%;
+	margin: auto;
+}
+
+header{ padding: 40px 0; }
+header h1{ font-size: 3em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgba(0, 0, 0, 0.8);
+}
+header .wrapper > ul > li{ display: inline-block;
+	vertical-align: top;
+}
+header .wrapper > ul > li > h2{ padding: 10px;
+	margin: 5px;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 3px;
+	transition: all 0.3s ease;
+}
+header .wrapper > ul > li > h2:hover{ background-color: #3498db; }
+header .wrapper > ul > li > h2 a{ color: rgba(0, 0, 0, 0.8);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+header .wrapper > ul > li > h2:hover a{ color: white; }
+header .wrapper > ul > li > ul{ display: none; }
+
+content > article, section article aside{ background-size: cover; }
+content > article:nth-child(n+1), section article aside{ background-image: url(images/sample1.jpg); }
+content > article:nth-child(2n+1){ background-image: url(images/sample2.jpg); }
+content > article > aside{ padding: 100px;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+content > article > aside > h3, section article aside h3{ color: white;
+	margin: 20px;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+content > article > aside > h2 a, section article aside h2{ font-size: 2em;
+	color: white;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+content > article > aside:hover{ background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+content > article > aside:hover > h2 a{ color: #3498db; }
+content > article > aside > ul{ margin: 15px 0;
+	height: 40px;
+}
+content > article > aside > ul > li{ display: inline-block;
+	verticla-align: middle;
+	padding: 5px;
+	transition: all 0.3s ease;
+}
+content > article > aside > ul > li > a{ display: none; }
+content > article > aside > ul > li  img{ display: block;
+	width: 30px;
+	height: 30px;
+	transition: all 0.3s ease;
+}
+
+section > article{ padding: 20px 0; }
+section > article > aside > div{ padding: 100px 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+section > article content p{ padding: 30px 0;font-size: 1.5em;
+	line-height: 2em;
+	text-align: justify;
+	text-indent: 2em;
+}
+section > article content p a{ font-size: 1.1em;
+	text-decoration: underline;
+	color: black;
+	transition: all 0.3s ease;
+}
+section > article content p a:hover{ color: #3498db; }
+section > article content p sup a{ color: black;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+section > article content figure{ text-align: center; }
+section > article content figure img{ display:inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 2px;
+}
+section > article content figure figcaption{ font-style: italic;
+	color: rgba(0, 0, 0, 0.6);
+}
+section > article footer div{ width: 50%;
+	margin: 10px 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+section > article footer ul{ list-style-type: disc;
+	color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,37 @@
+body{ font-family: Arial; }
+
+nav > ul > li:first-child{ text-align: center;
+	box-shadow: 0px 0px 5px 0px #656565;
+}
+nav > ul > li:first-child ul{ display: inline-block; }
+nav > ul > li:first-child ul li{ display: inline-block;
+	vertical-align: middle;
+	padding: 10px 20px;
+	border-right: 1px solid rgba(0, 0, 0, 0.3);
+	border-bottom: 3px solid rgba(0, 0, 0, 0);
+	border-radius: 0 0 2px 2px;
+	transition: all 0.3s ease;
+}
+nav > ul > li:first-child ul li:hover{ border-bottom: 3px solid #1abc9c;
+	cursor: pointer;
+}
+nav > ul > li:first-child ul li:active, nav > ul > li:first-child ul li.selected{ background-color: rgba(0, 0, 0, 0.05);
+	border-bottom: 3px solid #1abc9c;
+}
+nav > ul > li:first-child ul li:last-child{ border-right: none; }
+nav > ul > li:first-child ul li h1{ font-size: 1.3em;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+nav > ul > li:last-child{ border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
+}
+nav > ul > li:last-child > ul{ text-align: center; }
+nav > ul > li:last-child > ul > li{ display: inline-block;
+	margin: 20px 0;
+}
+nav > ul > li:last-child > ul > li > ul > li{ margin: 10px 0; }
+nav > ul > li:last-child > ul > li > ul > li h2{ font-size: 1.1em;
+	color: rgba(0, 0, 0, 0.6);
+}
